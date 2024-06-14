@@ -1,0 +1,14 @@
+{
+	"name": "cpanel-express",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon index.js"
+	},
+	"author": "CaioHPerlin",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"express": "^4.19.2"
+	}
+}
