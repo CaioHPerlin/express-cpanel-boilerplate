@@ -1,4 +1,0 @@
----
-deployment:
-    tasks:
-        - /bin/cp -r * /home/nkarbits/api/freelancers
