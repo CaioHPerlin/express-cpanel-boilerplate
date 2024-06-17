@@ -9,8 +9,13 @@ app.get('/freelancers/hey', (req, res) => {
 	res.status(200).json({ message: 'hey there' });
 });
 
-app.get('/freelancers/database', (req, res) => {
-	res.status(200).json({ pool: 'pool' });
+app.get('/freelancers/database', async (req, res) => {
+	try {
+		const res = await pool.query('SELECT NOW()');
+		res.status(200).json({ rows: res.rows });
+	} catch (err) {
+		res.status(500).json({ error: err.stack });
+	}
 });
 
 const listener = app.listen(3000, () => {
